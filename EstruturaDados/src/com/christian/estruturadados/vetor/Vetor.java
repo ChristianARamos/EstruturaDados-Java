@@ -65,4 +65,9 @@ public class Vetor {
         
         return s.toString();
     }
+    
+    /**Imprime no console os elementos do vetor.*/
+    public void imprimirVetor(){
+        System.out.println(this.exibirElementos());
+    }
 }
