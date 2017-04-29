@@ -5,6 +5,8 @@
  */
 package com.christian.estruturadados.vetor;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Christian Ramos
@@ -32,7 +34,8 @@ public class Vetor {
     
     /**
      * @param 
-     * Adiciona um elemento ao vetor.*/
+     * Adiciona um elemento ao vetor.
+     */
     public boolean adicionarElemento(String elemento){
         
         if(this.tamanho < this.elementos.length){
@@ -42,5 +45,24 @@ public class Vetor {
             return true;
         }
         return false;
+    }
+    
+    /**Retorna os elementos do vetor.*/
+    public String exibirElementos(){
+           
+        StringBuilder s = new StringBuilder();
+        s.append("[");
+        
+        for(int i=0; i<this.tamanho-1; i++){
+            s.append(this.elementos[i]);
+            s.append(", ");
+        }
+        
+        if (this.tamanho > 0){
+            s.append(this.elementos[this.tamanho-1]);
+        }   
+        s.append("]");
+        
+        return s.toString();
     }
 }
