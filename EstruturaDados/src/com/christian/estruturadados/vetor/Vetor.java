@@ -5,69 +5,81 @@
  */
 package com.christian.estruturadados.vetor;
 
-import java.util.Arrays;
-
 /**
  *
  * @author Christian Ramos
  */
 public class Vetor {
-    
+
     private String[] elementos;
     private int tamanho;
-    
-    /**Construtor*/
-    public Vetor(int capacidade){
+
+    /**
+     * Construtor
+     */
+    public Vetor(int capacidade) {
         this.elementos = new String[capacidade];
         this.tamanho = 0;
     }
-    
-    /**Exibe o tamanho do vetor.*/
-    private int tamanho(){
+
+    /**
+     * Exibe o tamanho do vetor.
+     */
+    private int tamanho() {
         return this.tamanho;
     }
-    
-    /**Exibe a capacidade do vetor.*/
-    public int capacidadeVetor(){
+
+    /**
+     * Exibe a capacidade do vetor.
+     */
+    public int capacidadeVetor() {
         return this.elementos.length;
     }
-    
+
     /**
-     * @param 
-     * Adiciona um elemento ao vetor.
+     * @param Adiciona um elemento ao vetor.
      */
-    public boolean adicionarElemento(String elemento){
-        
-        if(this.tamanho < this.elementos.length){
+    public boolean adicionarElemento(String elemento) {
+
+        if (this.tamanho < this.elementos.length) {
             this.elementos[this.tamanho] = elemento;
-            this.tamanho ++;
+            this.tamanho++;
             System.out.println("Elemento " + this.tamanho() + " adicionado com sucesso!");
             return true;
         }
         return false;
     }
-    
-    /**Retorna os elementos do vetor.*/
-    public String exibirElementos(){
-           
+
+    /**
+     * Retorna os elementos do vetor.
+     */
+    public String exibirElementos() {
+
         StringBuilder s = new StringBuilder();
         s.append("[");
-        
-        for(int i=0; i<this.tamanho-1; i++){
+
+        for (int i = 0; i < this.tamanho - 1; i++) {
             s.append(this.elementos[i]);
             s.append(", ");
         }
-        
-        if (this.tamanho > 0){
-            s.append(this.elementos[this.tamanho-1]);
-        }   
+
+        if (this.tamanho > 0) {
+            s.append(this.elementos[this.tamanho - 1]);
+        }
         s.append("]");
-        
+
         return s.toString();
     }
+
+    public String mostrarElemento(int posicaovetor){
+        int posicao = posicaovetor;
+        return this.elementos[posicao].toString();
+    }
     
-    /**Imprime no console os elementos do vetor.*/
-    public void imprimirVetor(){
+    /**
+     * Imprime no console os elementos do vetor.
+     */
+    public void imprimirVetor() {
         System.out.println(this.exibirElementos());
     }
 }
