@@ -33,17 +33,22 @@ public class Mensagem {
     }
 
     /**Exibe uma mensagem de erro na tela.*/
-    public static void exibirMensagemErro(String msg, String tituloJanela){
-        JOptionPane.showMessageDialog(null, msg, tituloJanela, 0);
+    public static void exibirMensagemErro(String msg){
+        JOptionPane.showMessageDialog(null, msg, "<< ALERTA DE ERRO >>", 0);
     }
     
         /**Exibe uma informação na tela.*/
-    public static void exibirInformação(String msg, String tituloJanela){
-        JOptionPane.showMessageDialog(null, msg, tituloJanela, 1);
+    public static void exibirInformação(String msg){
+        JOptionPane.showMessageDialog(null, msg, "<< INFORMAÇÃO >>", 1);
     }
     
     /**Exibe uma mensagem de aviso na tela.*/
-    public static void exibirMensagemAviso(String msg, String tituloJanela){
-        JOptionPane.showMessageDialog(null, msg, tituloJanela, 2);
+    public static void exibirMensagemAviso(String msg){
+        JOptionPane.showMessageDialog(null, msg, "<< ATENÇÃO >>", 2);
+    }
+    
+    /**Exibe uma mensagem de questionamento na tela.*/
+    public static void exibirMensagemQuestao(String msg){
+        JOptionPane.showMessageDialog(null, msg, "<< QUESTIONANDO >>", 3);
     }
 }
